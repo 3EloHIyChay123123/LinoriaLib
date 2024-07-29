@@ -1759,7 +1759,7 @@ do
             end);
         end
 
-        -- https://devforum.roblox.com/t/how-to-make-textboxes-follow-current-cursor-position/1368429/6
+        -- https://devforum.roblox.com/t/how-to-make-textboxes-follow-current--position/1368429/6
         -- thank you nicemike40 :)
 
         local function Update()
@@ -3529,11 +3529,12 @@ function Library:CreateWindow(...)
                 Cursor.Thickness = 1;
                 Cursor.Filled = true;
                 Cursor.Visible = true;
+                Cursor.Color = Color3.fromRGB(255, 255, 255);
 
                 local CursorOutline = Drawing.new('Triangle');
                 CursorOutline.Thickness = 1;
                 CursorOutline.Filled = false;
-                CursorOutline.Color = Color3.new(0, 0, 0);
+                CursorOutline.Color = Color3.fromRGB(0, 0, 0);
                 CursorOutline.Visible = true;
 
                 while Toggled and ScreenGui.Parent do
