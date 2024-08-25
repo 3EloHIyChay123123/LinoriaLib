@@ -8,11 +8,10 @@ local TweenService = game:GetService('TweenService');
 local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
-
-local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
+local gethui = gethui()
 
 local ScreenGui = Instance.new('ScreenGui');
-ProtectGui(ScreenGui);
+ScreenGui.Parent = gethui
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 ScreenGui.Parent = CoreGui;
