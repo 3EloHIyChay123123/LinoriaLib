@@ -1254,12 +1254,14 @@ do
                 Event = InputService.InputBegan:Connect(function(Input)
                     local Key;
 
-                    -- remove keybind
+                    -- remove keybind.
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
                         if Input.KeyCode.Name == "Escape" then 
+                            print("X")
                             Key = ''
                         else 
+                            print(Input.KeyCode.Name)
                             Key = Input.KeyCode.Name;
                         end
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
