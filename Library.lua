@@ -1257,9 +1257,9 @@ do
                     -- remove keybind
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
-                        print(Input.KeyCode.Name)
-                        if Input.KeyCode.Name then 
-                            print(Input.KeyCode.Name)
+                        if Input.KeyCode.Name == "Escape" then 
+                            Key = ''
+                        else 
                             Key = Input.KeyCode.Name;
                         end
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
