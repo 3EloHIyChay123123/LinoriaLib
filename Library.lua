@@ -1257,12 +1257,7 @@ do
                     -- remove keybind.
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
-                        if Input.KeyCode.Name == "Escape" then 
-                            print("X")
-                            Key = ''
-                        else 
-                            Key = Input.KeyCode.Name;
-                        end
+                        Key = Input.KeyCode.Name;
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
                         Key = 'MB1';
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
@@ -1273,7 +1268,11 @@ do
                     Picking = false;
 
                     DisplayLabel.Text = Key;
-                    KeyPicker.Value = Key;
+                    if Key == 'Escape' then 
+                        Key = ''
+                    else 
+                        KeyPicker.Value = Key;  
+                    end
 
                     Library:SafeCallback(KeyPicker.ChangedCallback, Input.KeyCode or Input.UserInputType)
                     Library:SafeCallback(KeyPicker.Changed, Input.KeyCode or Input.UserInputType)
