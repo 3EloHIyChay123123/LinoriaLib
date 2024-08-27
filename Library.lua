@@ -1260,6 +1260,8 @@ do
                         Key = 'MB1';
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
                         Key = 'MB2';
+                    elseif Input.KeyCode == Enum.KeyCode.Escape then -- remove keybind
+                        Key = '';
                     end;
 
                     Break = true;
