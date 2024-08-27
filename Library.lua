@@ -1254,8 +1254,11 @@ do
                 Event = InputService.InputBegan:Connect(function(Input)
                     local Key;
 
-                    if Input.UserInputType == Enum.UserInputType.Keyboard and not Input.KeyCode == Enum.KeyCode.Escape then
-                        Key = Input.KeyCode.Name;
+                    if Input.UserInputType == Enum.UserInputType.Keyboard then
+                        if Input.KeyCode.Name then 
+                            print(Input.KeyCode.Name)
+                            Key = Input.KeyCode.Name;
+                        end
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
                         Key = 'MB1';
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
