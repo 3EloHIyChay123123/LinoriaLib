@@ -1261,7 +1261,6 @@ do
                             print("X")
                             Key = ''
                         else 
-                            print(Input.KeyCode.Name)
                             Key = Input.KeyCode.Name;
                         end
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
